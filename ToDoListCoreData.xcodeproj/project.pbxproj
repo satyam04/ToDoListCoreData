@@ -15,6 +15,9 @@
 		63D415141F04319900608C44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D415121F04319900608C44 /* LaunchScreen.storyboard */; };
 		63D4151F1F04319900608C44 /* ToDoListCoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D4151E1F04319900608C44 /* ToDoListCoreDataTests.swift */; };
 		63D4152A1F04319900608C44 /* ToDoListCoreDataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D415291F04319900608C44 /* ToDoListCoreDataUITests.swift */; };
+		63D415381F04592D00608C44 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D415371F04592D00608C44 /* MyTableViewCell.swift */; };
+		63D4153A1F045D8D00608C44 /* MyTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D415391F045D8D00608C44 /* MyTableViewCell2.swift */; };
+		63D4153C1F04638F00608C44 /* MyTableViewCell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D4153B1F04638F00608C44 /* MyTableViewCell3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		63D415251F04319900608C44 /* ToDoListCoreDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoListCoreDataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63D415291F04319900608C44 /* ToDoListCoreDataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListCoreDataUITests.swift; sourceTree = "<group>"; };
 		63D4152B1F04319900608C44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63D415371F04592D00608C44 /* MyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
+		63D415391F045D8D00608C44 /* MyTableViewCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell2.swift; sourceTree = "<group>"; };
+		63D4153B1F04638F00608C44 /* MyTableViewCell3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,9 @@
 				63D415121F04319900608C44 /* LaunchScreen.storyboard */,
 				63D415151F04319900608C44 /* Info.plist */,
 				63D4150D1F04319900608C44 /* ToDoListCoreData.xcdatamodeld */,
+				63D415371F04592D00608C44 /* MyTableViewCell.swift */,
+				63D415391F045D8D00608C44 /* MyTableViewCell2.swift */,
+				63D4153B1F04638F00608C44 /* MyTableViewCell3.swift */,
 			);
 			path = ToDoListCoreData;
 			sourceTree = "<group>";
@@ -263,8 +272,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				63D415091F04319900608C44 /* ViewController.swift in Sources */,
+				63D415381F04592D00608C44 /* MyTableViewCell.swift in Sources */,
 				63D415071F04319900608C44 /* AppDelegate.swift in Sources */,
 				63D4150F1F04319900608C44 /* ToDoListCoreData.xcdatamodeld in Sources */,
+				63D4153A1F045D8D00608C44 /* MyTableViewCell2.swift in Sources */,
+				63D4153C1F04638F00608C44 /* MyTableViewCell3.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +523,7 @@
 				63D415301F04319900608C44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		63D415311F04319900608C44 /* Build configuration list for PBXNativeTarget "ToDoListCoreDataTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +532,7 @@
 				63D415331F04319900608C44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		63D415341F04319900608C44 /* Build configuration list for PBXNativeTarget "ToDoListCoreDataUITests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +541,7 @@
 				63D415361F04319900608C44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

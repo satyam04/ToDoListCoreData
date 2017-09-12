@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ToDoListCoreData" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,145 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QJO-Pv-jUf">
+                                <rect key="frame" x="0.0" y="79" width="375" height="588"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="0.080002270638942719" green="0.47133183479309082" blue="0.96185535192489624" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mycell" id="Aeu-A8-3JO" customClass="MyTableViewCell" customModule="ToDoListCoreData" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Aeu-A8-3JO" id="t0C-RN-BRV">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yellow" translatesAutoresizingMaskIntoConstraints="NO" id="OcT-P1-iJL">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To Do list item" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kjG-eb-FbO">
+                                                    <rect key="frame" x="62" y="8" width="250" height="28"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="OcT-P1-iJL" secondAttribute="trailing" id="2AD-gY-abe"/>
+                                                <constraint firstAttribute="bottom" secondItem="OcT-P1-iJL" secondAttribute="bottom" id="MtU-cI-sPT"/>
+                                                <constraint firstItem="OcT-P1-iJL" firstAttribute="top" secondItem="t0C-RN-BRV" secondAttribute="top" id="fKK-W4-VYJ"/>
+                                                <constraint firstItem="OcT-P1-iJL" firstAttribute="leading" secondItem="t0C-RN-BRV" secondAttribute="leading" id="zV8-XG-eSf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="myimageView" destination="OcT-P1-iJL" id="yNN-GV-xes"/>
+                                            <outlet property="mylable" destination="kjG-eb-FbO" id="xch-TD-lYg"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mycell2" id="oeq-qt-i1c" customClass="MyTableViewCell2" customModule="ToDoListCoreData" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oeq-qt-i1c" id="Ddo-Y3-b1L">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orange" translatesAutoresizingMaskIntoConstraints="NO" id="Acn-cz-4uy">
+                                                    <rect key="frame" x="-18" y="0.0" width="411" height="44"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To Do list item" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1e-v3-rmO">
+                                                    <rect key="frame" x="62" y="8" width="250" height="28"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Acn-cz-4uy" firstAttribute="top" secondItem="Ddo-Y3-b1L" secondAttribute="top" id="EPw-qF-jHa"/>
+                                                <constraint firstItem="Acn-cz-4uy" firstAttribute="leading" secondItem="Ddo-Y3-b1L" secondAttribute="leading" constant="-18" id="P48-kI-Qwy"/>
+                                                <constraint firstAttribute="bottom" secondItem="Acn-cz-4uy" secondAttribute="bottom" id="pIF-Qh-fdb"/>
+                                                <constraint firstAttribute="trailing" secondItem="Acn-cz-4uy" secondAttribute="trailing" constant="-18" id="pn4-us-U4O"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="myimageView2" destination="Acn-cz-4uy" id="bBl-Rk-HmQ"/>
+                                            <outlet property="mylable2" destination="Z1e-v3-rmO" id="2iF-ek-IQz"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mycell3" id="nK6-tn-Csp" customClass="MyTableViewCell3" customModule="ToDoListCoreData" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="116" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nK6-tn-Csp" id="uC7-yn-Ug8">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="green" translatesAutoresizingMaskIntoConstraints="NO" id="zjJ-vf-QVg">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To Do list item" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TeO-dU-G47">
+                                                    <rect key="frame" x="62" y="6" width="250" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="zjJ-vf-QVg" secondAttribute="bottom" id="FHw-aE-erT"/>
+                                                <constraint firstItem="zjJ-vf-QVg" firstAttribute="top" secondItem="uC7-yn-Ug8" secondAttribute="top" id="MQA-J1-LIa"/>
+                                                <constraint firstAttribute="trailing" secondItem="zjJ-vf-QVg" secondAttribute="trailing" id="XV8-hB-9so"/>
+                                                <constraint firstItem="zjJ-vf-QVg" firstAttribute="leading" secondItem="uC7-yn-Ug8" secondAttribute="leading" id="cp0-yY-neQ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="image3" destination="zjJ-vf-QVg" id="aRs-Wy-bKF"/>
+                                            <outlet property="lable3" destination="TeO-dU-G47" id="J97-JF-PgP"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="To do list item..." textAlignment="natural" minimumFontSize="17" background="orange" translatesAutoresizingMaskIntoConstraints="NO" id="1G8-cd-KC5">
+                                <rect key="frame" x="16" y="20" width="220" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1d9-fK-Dlf">
+                                <rect key="frame" x="301" y="14" width="52" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="add"/>
+                                <connections>
+                                    <action selector="addItem:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mYf-TQ-xnF"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="1G8-cd-KC5" secondAttribute="trailing" constant="123" id="IxP-Tf-PhU"/>
+                            <constraint firstItem="QJO-Pv-jUf" firstAttribute="top" secondItem="1G8-cd-KC5" secondAttribute="bottom" constant="29" id="ObF-Kl-LQQ"/>
+                            <constraint firstItem="1G8-cd-KC5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="TO3-TB-qQQ"/>
+                            <constraint firstItem="QJO-Pv-jUf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="59" id="arv-Jo-db3"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QJO-Pv-jUf" secondAttribute="bottom" id="qij-67-J0X"/>
+                            <constraint firstItem="1G8-cd-KC5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="r88-oM-RvR"/>
+                            <constraint firstItem="QJO-Pv-jUf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tni-Va-YcX"/>
+                            <constraint firstAttribute="trailing" secondItem="QJO-Pv-jUf" secondAttribute="trailing" id="zLG-4j-ckq"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mytable" destination="QJO-Pv-jUf" id="LU6-Fx-Kvb"/>
+                        <outlet property="toDoTextFeild" destination="1G8-cd-KC5" id="rfu-CY-IxK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="add" width="256" height="256"/>
+        <image name="green" width="149" height="61"/>
+        <image name="orange" width="175" height="72"/>
+        <image name="yellow" width="149" height="61"/>
+    </resources>
 </document>
